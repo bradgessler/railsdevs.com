@@ -517,8 +517,11 @@ en:
         subtitle: Find your next Rails developer today.
         title: Ready to start hiring?
       faq:
+        part_time:
+          a_html: A cheaper, less robust plan is available. Email the founder – that's me, Joe! – to see if you are a good fit at <a href='mailto:joe@railsdevs.com' class='underline'>joe@railsdevs.com</a>.
+          q: What if I only need to hire freelancers or contractors?
         annual:
-          a_html: Yes. Email the founder – that's me, Joe! – to set up annual billing at <a href='mailto:joe@railsdevs.com' class='underline'>joe@railsdevs.com</a>.
+          a_html: Yes. Email the founder – that's me, Joe! – to set up discounted annual billing at <a href='mailto:joe@railsdevs.com' class='underline'>joe@railsdevs.com</a>.
           q: Can I pay annually or yearly?
         cancellation:
           a_html: Yes. You can cancel your subscription from the Billing link in the user drop-down. You will lose access to all paid features at the end of your billing period.
