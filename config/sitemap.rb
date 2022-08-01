@@ -5,14 +5,14 @@ SitemapGenerator::Sitemap.public_path = "tmp"
 SitemapGenerator::Sitemap.sitemaps_host = Rails.configuration.sitemaps_host
 SitemapGenerator::Sitemap.sitemaps_path = "sitemaps/"
 
-if Rails.configuration.upload_sitemap
-  SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
-    Rails.application.credentials.dig(:aws, :sitemaps_bucket),
-    aws_access_key_id: Rails.application.credentials.dig(:aws, :access_key_id),
-    aws_secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key),
-    aws_region: Rails.application.credentials.dig(:aws, :region)
-  )
-end
+# if Rails.configuration.upload_sitemap
+#   SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
+#     Rails.application.credentials.dig(:aws, :sitemaps_bucket),
+#     aws_access_key_id: Rails.application.credentials.dig(:aws, :access_key_id),
+#     aws_secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key),
+#     aws_region: Rails.application.credentials.dig(:aws, :region)
+#   )
+# end
 
 SitemapGenerator::Sitemap.create do
   add root_path, changefreq: "always", priority: 1, lastmod: Developer.visible.maximum(:updated_at)
