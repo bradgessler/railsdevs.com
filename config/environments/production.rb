@@ -65,7 +65,7 @@ Rails.application.configure do
   # Use Postmark to send email.
   config.action_mailer.delivery_method = :postmark
   config.action_mailer.postmark_settings = {
-    api_token: Rails.application.credentials.postmark_api_token
+    api_token: ENV["POSTMARK_API_TOKEN"]
   }
 
   config.action_mailer.perform_caching = false
