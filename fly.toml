@@ -3,7 +3,10 @@
 app = "rails-devs-demonstrator"
 kill_signal = "SIGINT"
 kill_timeout = 5
-processes = []
+
+[processes]
+  web = "bundle exec rails server -b [::] -p 8080"
+  worker = "bundle exec sidekiq"
 
 [build]
   [build.args]
@@ -27,7 +30,7 @@ processes = []
 [[services]]
   http_checks = []
   internal_port = 8080
-  processes = ["app"]
+  processes = ["web"]
   protocol = "tcp"
   script_checks = []
   [services.concurrency]
