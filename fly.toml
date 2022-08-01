@@ -18,6 +18,7 @@ processes = []
   PORT = "8080"
   SERVER_COMMAND = "bundle exec puma -C config/puma.rb"
   HOST = "rails-devs-demonstrator.fly.dev"
+  REDIS_URL = "rails-devs-demonstrator-redis.internal"
 
 [experimental]
   allowed_public_ports = []
